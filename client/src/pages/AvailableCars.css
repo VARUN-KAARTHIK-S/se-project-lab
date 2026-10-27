@@ -1,0 +1,179 @@
+.available-cars-container {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-primary);
+    padding: 3rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.available-cars-container h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 0.5rem;
+    color: var(--text-snow);
+}
+
+.search-summary {
+    margin-bottom: 3rem;
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.search-summary span {
+    color: var(--text-snow);
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-blue);
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.car-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.car-image-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background: #111;
+}
+
+.car-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.car-card:hover .car-image {
+    transform: scale(1.1);
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.car-card:hover .nav-btn {
+    opacity: 1;
+}
+
+.nav-btn.prev {
+    left: 10px;
+}
+
+.nav-btn.next {
+    right: 10px;
+}
+
+.car-details {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.car-details h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-snow);
+}
+
+.car-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.car-badge {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-glass);
+    color: var(--text-dim);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.car-location {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin: 0;
+}
+
+.car-hub-info {
+    font-size: 0.95rem;
+    color: var(--accent-blue);
+    font-weight: 700;
+    margin: -0.5rem 0 0.5rem 0;
+}
+
+.book-btn {
+    margin-top: auto;
+    width: 100%;
+    padding: 14px;
+    background: var(--text-snow);
+    color: var(--bg-primary);
+    border-radius: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.book-btn:hover {
+    filter: brightness(0.9);
+}
+
+.back-link {
+    margin-top: 4rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+}
+
+.back-link:hover {
+    color: var(--text-snow);
+    border-bottom-color: var(--text-snow);
+}

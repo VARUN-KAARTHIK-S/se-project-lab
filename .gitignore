@@ -1,0 +1,6 @@
+**/node_modules/
+**/dist/
+**/.env
+server/uploads/
+client/eslint_report.txt
+client/eslint.json

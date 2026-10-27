@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #FFFAFA;
+}
+
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 10%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 10%);
+}
+
+.signin-box {
+    background: #050505;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signin-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.08);
+}
+
+.signin-box h2 {
+    font-size: 2rem;
+    color: #FFFAFA;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.signin-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.signin-box input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #333;
+    padding: 12px 0;
+    color: #FFFAFA;
+    font-size: 1rem;
+    transition: border-bottom-color 0.3s ease;
+    font-family: inherit;
+}
+
+.signin-box input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.signin-box input:focus {
+    outline: none;
+    border-bottom-color: #FFFAFA;
+}
+
+.signin-box button {
+    margin-top: 1rem;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #FFFAFA;
+    background-color: #FFFAFA;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.signin-box button:hover {
+    background-color: transparent;
+    color: #FFFAFA;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.signin-box p {
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.signin-box a {
+    color: #FFFAFA;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    position: relative;
+}
+
+.signin-box a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #FFFAFA;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.signin-box a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

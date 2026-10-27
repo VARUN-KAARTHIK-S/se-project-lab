@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #FFFAFA;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 10%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 10%);
+}
+
+.signup-box {
+    background: #050505;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.08);
+}
+
+.signup-box h2 {
+    font-size: 2rem;
+    color: #FFFAFA;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.signup-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.signup-box input,
+.signup-box select {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #333;
+    padding: 12px 0;
+    color: #FFFAFA;
+    font-size: 1rem;
+    transition: border-bottom-color 0.3s ease;
+    font-family: inherit;
+    width: 100%;
+}
+
+.signup-box input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.signup-box input:focus,
+.signup-box select:focus {
+    outline: none;
+    border-bottom-color: #FFFAFA;
+}
+
+.signup-box select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2 4L6 8L10 4' stroke='%23FFFAFA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+}
+
+.signup-box option {
+    background-color: #000;
+    color: #fff;
+}
+
+.signup-box button {
+    margin-top: 1rem;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #FFFAFA;
+    background-color: #FFFAFA;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.signup-box button:hover {
+    background-color: transparent;
+    color: #FFFAFA;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.signup-box p {
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.signup-box a {
+    color: #FFFAFA;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    position: relative;
+}
+
+.signup-box a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #FFFAFA;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.signup-box a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

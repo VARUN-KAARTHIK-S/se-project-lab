@@ -1,0 +1,121 @@
+.home-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #000000 100%);
+}
+
+.search-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 4rem auto;
+    background: var(--bg-secondary);
+    padding: 3rem;
+    border-radius: 24px;
+    border: 1px solid var(--border-glass);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+}
+
+.search-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--text-snow);
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.search-form input {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-glass);
+    padding: 14px 18px;
+    border-radius: 12px;
+    color: var(--text-snow);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.search-form input:focus {
+    border-color: var(--accent-blue);
+    background: var(--bg-primary);
+}
+
+.search-form button {
+    grid-column: span 2;
+    margin-top: 1rem;
+    padding: 16px;
+    border-radius: 12px;
+    background: var(--text-snow);
+    color: var(--bg-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.search-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+    filter: brightness(0.9);
+}
+
+.hero-content {
+    text-align: center;
+    padding: 6rem 2rem 2rem;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-bottom: 1rem;
+    background: linear-gradient(180deg, #fff 0%, #666 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .search-form {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form button {
+        grid-column: span 1;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
